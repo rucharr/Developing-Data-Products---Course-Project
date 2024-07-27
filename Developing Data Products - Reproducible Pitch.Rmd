@@ -1,0 +1,39 @@
+---
+title: "Developing Data Products - Reproducible Pitch"
+author: "Rucha Potkar"
+date: "2024-07-27"
+subtitle: Determining Prices of Diamonds
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+Have you ever wondered how diamonds are priced beyond the number of carats(or weight)? Price also depends on the diamond's cut, color, and clarity.
+- Cut: quality of the diamond from best to worst (Ideal, Premium, Very Good, Good, Fair)
+- Color: best(D) to worst(J)
+- Clarity: measures how clear the diamond is from best to worst (IF, VVS2, VVS1, VS2, VS1, SI2, SI1, I1)
+
+This shiny app will predict diamond price based on your input of these factors.
+
+## Diamond Dataset
+
+Here is a summary of the "diamonds" dataset found in the ggplot2 R package. As you can see, the factors were measured in over 50,000 diamonds.
+```{r echo=FALSE}
+library(ggplot2)
+data(diamonds)
+str(diamonds[,c(1:4,7)])
+```
+
+## Plotting the dataset
+
+```{r, echo=TRUE}
+plot(diamonds[,c(1:4,7)])
+```
+
+## Links for the project
+
+https://github.com/rucharr/Developing-Data-Products---Course-Project.git
